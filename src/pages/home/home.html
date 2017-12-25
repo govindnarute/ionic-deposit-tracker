@@ -1,0 +1,31 @@
+<ion-header >
+  <ion-navbar color="danger">
+  
+<button ion-button float-right color="dark" (click)="logout()"><ion-icon ios="ios-power" float-right md="md-power"></ion-icon></button>    
+ 
+
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<button ion-button float-right (click)="goToAddUser()"> ADD USER</button>
+<button ion-button float-right color="" style="margin-bottom: 20px;" (click)="profile()"> Profile</button>    
+<ion-card padding >
+  <ion-card-header >
+    TOTAL DEPOSIT
+  </ion-card-header>
+  <ion-card-content >
+    Rs. {{totalAmount}}
+  </ion-card-content>
+</ion-card>
+<ion-list>
+  <ion-item *ngFor="let user of users;let i = index" >
+   <h2 text-uppercase (click)="getExpences(user,i)"> {{user.firstName}} {{user.lastName}}</h2> {{user.mobile}}
+   <ion-badge item-end (click)="getExpences(user,i)">{{user.totalExp}}</ion-badge>
+   <ion-icon name="close" item-end (click)="deleteUser(i)"></ion-icon>
+   
+    </ion-item>
+</ion-list>
+
+</ion-content>

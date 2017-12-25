@@ -1,0 +1,37 @@
+<!--
+  Generated template for the AddUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Add User</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+<form #frm="ngForm" (ngSubmit)="addUser(frm.value)">
+  <ion-item>
+    <ion-label stacked>First Name</ion-label>
+    <ion-input type="text"  type="text" name="firstName" ngModel required></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label stacked>Last Name</ion-label>
+    <ion-input type="text"  name="lastName" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Mobile </ion-label>
+    <ion-input type="text"  name="mobile" ngModel required pattern="[0-9]{10}"></ion-input>
+  </ion-item>
+
+<button ion-button block type="submit" [disabled]="!frm.valid" >Save</button>
+</form>
+</ion-list>
+
+</ion-content>

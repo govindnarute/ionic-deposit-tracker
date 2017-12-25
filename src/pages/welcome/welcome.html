@@ -1,0 +1,28 @@
+
+
+
+<ion-content padding >
+  <div color="dark">
+   <!--<h1 text-center color="dark">Shivam Residency</h1>-->
+   <ion-thumbnail item-start style="margin-left: 30%">
+        <img src="assets/imgs/logo.png" width="60%">
+      </ion-thumbnail>
+    <ion-list>
+      
+  <ion-item style="margin-top: 10%">
+    <ion-label stacked>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <div padding>
+  <button block ion-button (click)="signIn()" >Sign In</button>
+  <button block ion-button style="margin-top: 20px;" (click)="resetPassword()" >Reset Password</button>
+  <i color="primary" style="color:cadetblue">Note- Default username is admin and password is qwerty</i >
+</div>
+</ion-list>
+</div>
+</ion-content>
